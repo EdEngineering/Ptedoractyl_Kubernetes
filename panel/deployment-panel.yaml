@@ -78,18 +78,18 @@ spec:
           name: pterodactyl-logs-content
 
       - name: cloud-sql-proxy
-          image: gcr.io/cloudsql-docker/gce-proxy:1.28.0
-          command:
-            - "/cloud_sql_proxy"
-            - "-log_debug_stdout"
-            - "-instances=applaudo-final-project-ed:us-central1:dev-my-sql"
-            - "-credential_file=/secrets/sql-client"
-          securityContext:
-            runAsNonRoot: true
-          volumeMounts:
-          - name: sql-proxy-volume
-            mountPath: /secrets/
-            readOnly: true
+        image: gcr.io/cloudsql-docker/gce-proxy:1.28.0
+        command:
+          - "/cloud_sql_proxy"
+          - "-log_debug_stdout"
+          - "-instances=applaudo-final-project-ed:us-central1:dev-my-sql"
+          - "-credential_file=/secrets/sql-client"
+        securityContext:
+          runAsNonRoot: true
+        volumeMounts:
+        - name: sql-proxy-volume
+          mountPath: /secrets/
+          readOnly: true
 
       volumes:
       - name: sql-proxy-volume
