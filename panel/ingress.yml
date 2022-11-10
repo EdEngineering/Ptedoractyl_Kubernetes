@@ -16,8 +16,7 @@ spec:
         backend:
           service:
             name: pterodactyl
-            port:
-              name: https
+            port: 80
   tls:
   - hosts:
     - pterodactyl.evasquezapplaudo.ga
