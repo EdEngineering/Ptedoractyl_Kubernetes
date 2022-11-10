@@ -88,12 +88,12 @@ spec:
         securityContext:
           runAsNonRoot: true
         volumeMounts:
-        - name: sql-proxy-volume
+        - name: sql-proxy-client
           mountPath: /secrets/
           readOnly: true
 
       volumes:
-      - name: sql-proxy-volume
+      - name: sql-proxy-client
         secret:
           secretName: sql-client
       - name: pterodactyl-app-content
