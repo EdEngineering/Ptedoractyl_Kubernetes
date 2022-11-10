@@ -61,7 +61,7 @@ spec:
         - name: DB_PORT
           value: "3306"
         - name: APP_URL
-          value: "https://pterodactyl.evasquezapplaudo.ga" # url of server panel
+          value: "" # url of server panel
         - name: APP_TIMEZONE
           value: "UTC"
         - name: APP_SERVICE_AUTHOR

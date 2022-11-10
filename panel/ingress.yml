@@ -18,3 +18,7 @@ spec:
             name: pterodactyl
             port:
               name: https
+  tls:
+  - hosts:
+    - pterodactyl.evasquezapplaudo.ga
+    secretName: pterodactyl-cert-tls
